@@ -1,14 +1,10 @@
 package atividade7;
 
-import java.time.LocalDateTime;
-
 public class Usuario implements Autenticavel{
 	private Autenticador autenticador;
 	
 	public Usuario(String userName,String senha) {
-		autenticador= new Autenticador();
-		autenticador.setUserName(userName);
-		autenticador.setSenha(senha);
+		autenticador = new Autenticador(userName,senha);
 	}
 	
 	public String getUserName() {
@@ -31,8 +27,8 @@ public class Usuario implements Autenticavel{
 	}
 
 	@Override
-	public Boolean autentica(String userName,String senha) {
-		return this.autenticador.autentica(getUserName(), getSenha());
+	public void autentica(String userName,String senha) throws LoginFailException{
+		this.autenticador.autentica(userName, senha);
 	}
 	
 	

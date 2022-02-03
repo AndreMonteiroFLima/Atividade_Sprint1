@@ -11,7 +11,6 @@ public class Main {
 		ArrayList<Quiz> quiz= new ArrayList<>();
 		boolean acerto,nomeNulo=false;
 		String nome;
-		Usuario user = new Usuario();
 		
 		//Inicializando Perguntas e Respostas
 		quiz.add(new Quiz("Qual a cor do céu?","Azul"));
@@ -25,26 +24,29 @@ public class Main {
 			if(nome.equals("")) {
 				nomeNulo=true;
 				System.out.println("Nome invalido por favor digite um nome.");
-			}
-			else
-				user=new Usuario(nome);
+			}else
+				nomeNulo=false;
 		}while(nomeNulo);
 		//
-		
+		Usuario user= new Usuario(nome);
 		//Para cada quiz dentro da collection quiz ele vai mostrar a pergunta e receber a resposta
-			
-		for(Quiz aux: quiz) {
-			System.out.println(aux.getPergunta());
-			acerto=aux.responde(scanner.nextLine());
-			user.incrementaAcertosErros(acerto);
-			if(acerto)
-				System.out.println("Acertou");
-			else
-				System.out.println("Errou");
+		try {
+			for(Quiz aux: quiz) {
+				System.out.println(aux.getPergunta());
+				acerto=aux.responde(scanner.nextLine());
+				user.incrementaAcertosErros(acerto);
+				if(acerto)
+					System.out.println("Acertou");
+				else
+					System.out.println("Errou");
+			}
+		}catch(Exception e) {
+			System.out.println(e.getMessage());
 		}
 		
 		System.out.println(user.toString());
 
+		scanner.close();
 //		System.out.println(user.toString());
 	}
 

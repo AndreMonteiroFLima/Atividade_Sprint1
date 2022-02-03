@@ -6,6 +6,6 @@ public interface Autenticavel {
 	
 	public void setSenha(String senha);
 	
-	public Boolean autentica(String userName,String senha);
+	public void autentica(String userName,String senha) throws LoginFailException;
 	
 }

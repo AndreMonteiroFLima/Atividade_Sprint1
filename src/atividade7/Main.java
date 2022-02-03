@@ -7,7 +7,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		ArrayList<Autenticavel> users= new ArrayList<>();
+		ArrayList<Usuario> users= new ArrayList<>();
 		Scanner scanner= new Scanner(System.in);
 		String userName,senha;
 		
@@ -21,9 +21,12 @@ public class Main {
 		System.out.println("Senha:");
 		senha=scanner.nextLine();
 		
-		if(Autenticador.verificaBaseDeDados(users, userName, senha)==false)
-			System.out.println("Usuário e/ou senha incorretos.");
 		
+		try{
+			Autenticador.verificaBaseDeDados(users, userName, senha);
+		}catch(LoginFailException e) {
+			System.out.println(e.getMessage());
+		}
 		
 		scanner.close();
 	}
