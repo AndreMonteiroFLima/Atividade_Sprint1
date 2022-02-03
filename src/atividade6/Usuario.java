@@ -5,6 +5,10 @@ public class Usuario {
 	private int acertos;
 	private int erros;
 	
+	public Usuario(){
+		
+	}
+	
 	public Usuario(String nomeUsuario){
 		this.nomeUsuario=nomeUsuario;		
 	}
@@ -12,25 +16,30 @@ public class Usuario {
 	public String getNomeUsuario() {
 		return nomeUsuario;
 	}
+	
 	public void setNomeUsuario(String nomeUsuario) {
 		this.nomeUsuario = nomeUsuario;
 	}
+	
 	public int getAcertos() {
 		return acertos;
 	}
+	
+	//Recebe a resposta certa ou errada e incrementa o campo certo
 	public void incrementaAcertosErros(Boolean teste) {
 		if(teste)
 			this.acertos++;
 		else
 			this.erros++;
 	}
+	
 	public int getErros() {
 		return erros;
 	}
 	
 	@Override
 	public String toString() {
-		return("Usuario " + nomeUsuario + "\n Acertos: " + acertos + "\n Erros: " + erros);
+		return("\nUsuario " + getNomeUsuario() + "\n Acertos: " + getAcertos() + "\n Erros: " + getErros());
 	}
 	
 }
