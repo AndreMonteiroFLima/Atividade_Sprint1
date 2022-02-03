@@ -3,44 +3,36 @@ package atividade7;
 import java.time.LocalDateTime;
 
 public class Usuario implements Autenticavel{
-	private String userName;
-	private String senha;
+	private Autenticador autenticador;
 	
 	public Usuario(String userName,String senha) {
-		this.userName=userName;
-		this.senha=senha;
+		autenticador= new Autenticador();
+		autenticador.setUserName(userName);
+		autenticador.setSenha(senha);
 	}
 	
 	public String getUserName() {
-		return userName;
+		return this.autenticador.getUserName();
 	}
 
 
 	public void setUserName(String userName) {
-		this.userName = userName;
+		this.autenticador.setUserName(userName);
 	}
 
 
 	public String getSenha() {
-		return senha;
+		return this.autenticador.getSenha();
 	}
 
 
 	public void setSenha(String senha) {
-		this.senha = senha;
+		this.autenticador.setSenha(senha);
 	}
 
 	@Override
 	public Boolean autentica(String userName,String senha) {
-		if(this.senha.equals(senha) && this.equals(userName)) {
-			LocalDateTime data = LocalDateTime.now();
-			MsgLogin msg = new MsgLogin();
-			msg.retornaMensagem(data);
-			return true;
-		}
-		else
-			return false;
-		
+		return this.autenticador.autentica(getUserName(), getSenha());
 	}
 	
 	
