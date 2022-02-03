@@ -12,25 +12,29 @@ public class Usuario {
 	public String getNomeUsuario() {
 		return nomeUsuario;
 	}
+	
 	public void setNomeUsuario(String nomeUsuario) {
 		this.nomeUsuario = nomeUsuario;
 	}
+	
 	public int getAcertos() {
 		return acertos;
 	}
+	
 	public void incrementaAcertosErros(Boolean teste) {
 		if(teste)
 			this.acertos++;
 		else
 			this.erros++;
 	}
+	
 	public int getErros() {
 		return erros;
 	}
 	
 	@Override
 	public String toString() {
-		return("Usuario " + nomeUsuario + "\n Acertos: " + acertos + "\n Erros: " + erros);
+		return("Usuario " + getNomeUsuario() + "\n Acertos: " + getAcertos() + "\n Erros: " + getErros());
 	}
 	
 }
