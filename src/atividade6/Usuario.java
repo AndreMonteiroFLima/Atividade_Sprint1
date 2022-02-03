@@ -34,7 +34,7 @@ public class Usuario {
 	
 	@Override
 	public String toString() {
-		return("Usuario " + getNomeUsuario() + "\n Acertos: " + getAcertos() + "\n Erros: " + getErros());
+		return("\nUsuario " + getNomeUsuario() + "\n Acertos: " + getAcertos() + "\n Erros: " + getErros());
 	}
 	
 }
