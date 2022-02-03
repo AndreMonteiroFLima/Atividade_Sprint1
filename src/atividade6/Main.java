@@ -9,7 +9,9 @@ public class Main {
 		
 		Scanner scanner = new Scanner(System.in);
 		ArrayList<Quiz> quiz= new ArrayList<>();
-		boolean acerto;
+		boolean acerto,nomeNulo=false;
+		String nome;
+		Usuario user = new Usuario();
 		
 		quiz.add(new Quiz("Qual a cor do céu?","Azul"));
 		quiz.add(new Quiz("Quantas polegadas tem um monitor de 21'?","21"));
@@ -18,9 +20,14 @@ public class Main {
 		
 		System.out.println("Digite o Seu nome:");
 		
-		String nome = scanner.nextLine();
-		Usuario user=new Usuario(nome);
-		
+		do {
+			nome=scanner.nextLine();
+			if(nome.equals(null))
+				nomeNulo=true;
+			else
+				user=new Usuario(nome);
+		}while(nomeNulo);
+			
 		for(Quiz aux: quiz) {
 			System.out.println(aux.getPergunta());
 			acerto=aux.responde(scanner.nextLine());
@@ -32,7 +39,7 @@ public class Main {
 		}
 		
 		System.out.println(user.toString());
-		
+
 //		System.out.println(user.toString());
 	}
 
