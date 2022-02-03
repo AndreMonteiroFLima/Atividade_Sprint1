@@ -5,6 +5,10 @@ public class Usuario {
 	private int acertos;
 	private int erros;
 	
+	public Usuario(){
+		
+	}
+	
 	public Usuario(String nomeUsuario){
 		this.nomeUsuario=nomeUsuario;		
 	}
