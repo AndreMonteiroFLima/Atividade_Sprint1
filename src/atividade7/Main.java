@@ -13,7 +13,6 @@ public class Main {
 		users.add(new Usuario("Renan","12345"));
 		users.add(new Usuario("Thauany","12346"));
 		
-//		aaa
 		
 	}
 
