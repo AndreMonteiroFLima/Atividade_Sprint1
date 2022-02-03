@@ -32,6 +32,16 @@ public class Main {
 		//
 		
 		//Para cada quiz dentro da collection quiz ele vai mostrar a pergunta e receber a resposta
+		System.out.println("Digite o Seu nome:");
+		
+		do {
+			nome=scanner.nextLine();
+			if(nome.equals(null))
+				nomeNulo=true;
+			else
+				user=new Usuario(nome);
+		}while(nomeNulo);
+			
 		for(Quiz aux: quiz) {
 			System.out.println(aux.getPergunta());
 			acerto=aux.responde(scanner.nextLine());
