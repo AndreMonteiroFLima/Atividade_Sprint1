@@ -19,7 +19,7 @@ public class Quiz {
 		return resposta;
 	}
 	public boolean responde(String resposta) {
-		if(this.resposta == resposta){
+		if(this.resposta.equalsIgnoreCase(resposta)){
 			return true;
 		}else {
 			return false;

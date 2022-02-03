@@ -31,6 +31,7 @@ public class Main {
 				System.out.println("Errou");
 		}
 		
+		System.out.println(user.toString());
 		
 //		System.out.println(user.toString());
 	}
