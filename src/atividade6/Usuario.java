@@ -25,6 +25,7 @@ public class Usuario {
 		return acertos;
 	}
 	
+	//Recebe a resposta certa ou errada e incrementa o campo certo
 	public void incrementaAcertosErros(Boolean teste) {
 		if(teste)
 			this.acertos++;
