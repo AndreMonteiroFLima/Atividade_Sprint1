@@ -18,14 +18,14 @@ public class Usuario {
 	public int getAcertos() {
 		return acertos;
 	}
-	public void setAcertos(int acertos) {
-		this.acertos = acertos;
+	public void incrementaAcertosErros(Boolean teste) {
+		if(teste)
+			this.acertos++;
+		else
+			this.erros++;
 	}
 	public int getErros() {
 		return erros;
-	}
-	public void setErros(int erros) {
-		this.erros = erros;
 	}
 	
 	@Override

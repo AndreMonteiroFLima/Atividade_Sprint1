@@ -18,11 +18,11 @@ public class Quiz {
 	public String getResposta() {
 		return resposta;
 	}
-	public String responde(String resposta) {
+	public boolean responde(String resposta) {
 		if(this.resposta == resposta){
-			return "Acertou";
+			return true;
 		}else {
-			return "Errou";
+			return false;
 		}
 	}
 	
