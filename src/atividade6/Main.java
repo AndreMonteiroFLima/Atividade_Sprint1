@@ -21,7 +21,7 @@ public class Main {
 		do {
 			System.out.println("Digite o Seu nome:");
 			nome=scanner.nextLine();
-			if(nome.equals("")) {
+			if(nome.isBlank()) {
 				nomeNulo=true;
 				System.out.println("Nome invalido por favor digite um nome.");
 			}else

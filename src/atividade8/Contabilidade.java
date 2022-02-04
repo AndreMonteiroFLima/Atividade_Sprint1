@@ -2,6 +2,7 @@
  * Classe com a função de tirar o que for de contabilidade do funcionario
  * já que por mais que ele seja um contabil não precisa que os metodos sejam 
  * desenvolvidos dentro dele
+ * A classe utiliza BigDecimal para garantir a precisão dos valores
  * 
  */
 
@@ -48,6 +49,14 @@ public class Contabilidade {
 	public void setSalarioLiquido(BigDecimal salarioLiquido) {
 		this.salarioLiquido = salarioLiquido;
 	}
+	
+	/*
+	 * Metodos estaticos que cuidam dos valores internos da contabilidade
+	 * como calcular o bonus e o salario liquido, os metodos são altamente acoplados
+	 * assim sendo dependentes, mas deixando os valores seguros de alteração
+	 * extrena
+	 * 
+	 */
 	
 	public static BigDecimal calculaBonus(Contabil c){
 		if(c.getSalario().floatValue()<=1000) {
