@@ -42,5 +42,8 @@ public class Main {
 			Contabilidade.calculaSalarioLiquido(aux);
 			System.out.println(aux.toString());
 		}
+		
+		scanner.close();
 	}
+	
 }

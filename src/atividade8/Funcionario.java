@@ -1,3 +1,11 @@
+/*
+*
+*Funcionario implementa contabil e tem a classe contabilidade dentro de si
+*assim deixando que os metodos sejam executados por essa classe alinhada
+*
+*
+*/
+
 package atividade8;
 
 import java.math.BigDecimal;

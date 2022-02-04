@@ -1,3 +1,9 @@
+/*
+ * Essa classe cuida exclusivamente de mostrar a mensagem do login
+ *  
+ */
+
+
 package atividade7;
 
 import java.time.LocalDateTime;

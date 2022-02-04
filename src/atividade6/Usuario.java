@@ -1,3 +1,10 @@
+/*
+ * A Classe usuario guarda o nome e os acertos e erros cometidos
+ * no Quiz, assim mostrando posteriormente o seu resultado * 
+ * 
+ */
+
+
 package atividade6;
 
 public class Usuario {

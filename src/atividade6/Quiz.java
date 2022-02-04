@@ -1,3 +1,9 @@
+/*
+ * A classe Quiz possui 2 atributos Pergunta e Resposta
+ * Com exceção de 1 os outros metodos são padrão * 
+ */
+
+
 package atividade6;
 
 public class Quiz {

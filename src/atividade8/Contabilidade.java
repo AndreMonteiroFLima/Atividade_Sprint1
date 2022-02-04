@@ -1,3 +1,10 @@
+/*
+ * Classe com a função de tirar o que for de contabilidade do funcionario
+ * já que por mais que ele seja um contabil não precisa que os metodos sejam 
+ * desenvolvidos dentro dele
+ * 
+ */
+
 package atividade8;
 
 import java.math.BigDecimal;

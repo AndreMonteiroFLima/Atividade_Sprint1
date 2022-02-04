@@ -7,29 +7,32 @@ public class Usuario implements Autenticavel{
 		autenticador = new Autenticador(userName,senha);
 	}
 	
+	@Override
 	public String getUserName() {
 		return this.autenticador.getUserName();
 	}
 
-
+	@Override
 	public void setUserName(String userName) {
 		this.autenticador.setUserName(userName);
 	}
 
-
+	@Override
 	public String getSenha() {
 		return this.autenticador.getSenha();
 	}
 
-
+	@Override
 	public void setSenha(String senha) {
 		this.autenticador.setSenha(senha);
 	}
+	
 
 	@Override
-	public void autentica(String userName,String senha) throws LoginFailException{
-		this.autenticador.autentica(userName, senha);
+	public Boolean autentica(String userName,String senha) throws LoginFailException{
+		return this.autenticador.autentica(userName, senha);
 	}
+
 	
 	
 }
