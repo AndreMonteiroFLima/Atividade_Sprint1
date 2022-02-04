@@ -47,7 +47,6 @@ public class Main {
 		System.out.println(user.toString());
 
 		scanner.close();
-//		System.out.println(user.toString());
 	}
 
 }
